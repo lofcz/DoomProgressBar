@@ -1,4 +1,4 @@
-package manjaro.mpb.config;
+package notimeforphoton.dpb.config;
 
 import com.intellij.openapi.options.Configurable;
 import org.jetbrains.annotations.Nls;
@@ -6,9 +6,9 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public class MarioProgressBarConfigurable implements Configurable {
+public class DoomProgressBarConfigurable implements Configurable {
 
-  private MarioProgressBarSettingsComponent mySettingsComponent;
+  private DoomProgressBarSettingsComponent mySettingsComponent;
 
   // A default constructor with no arguments is required because this implementation
   // is registered as an applicationConfigurable EP
@@ -16,7 +16,7 @@ public class MarioProgressBarConfigurable implements Configurable {
   @Nls(capitalization = Nls.Capitalization.Title)
   @Override
   public String getDisplayName() {
-    return "Mario Progress Bar";
+    return "Doom Progress Bar";
   }
 
   @Override
@@ -27,13 +27,13 @@ public class MarioProgressBarConfigurable implements Configurable {
   @Nullable
   @Override
   public JComponent createComponent() {
-    mySettingsComponent = new MarioProgressBarSettingsComponent();
+    mySettingsComponent = new DoomProgressBarSettingsComponent();
     return mySettingsComponent.getPanel();
   }
 
   @Override
   public boolean isModified() {
-    MarioProgressBarSettingsState settings = MarioProgressBarSettingsState.getInstance();
+    DoomProgressBarSettingsState settings = DoomProgressBarSettingsState.getInstance();
     boolean modified = !mySettingsComponent.getChosenCharacter().equals(settings.selectedCharacter);
     modified |= mySettingsComponent.getChosenCharacter() != settings.selectedCharacter;
     return modified;
@@ -41,13 +41,13 @@ public class MarioProgressBarConfigurable implements Configurable {
 
   @Override
   public void apply() {
-    MarioProgressBarSettingsState settings = MarioProgressBarSettingsState.getInstance();
+    DoomProgressBarSettingsState settings = DoomProgressBarSettingsState.getInstance();
     settings.selectedCharacter = mySettingsComponent.getChosenCharacter();
   }
 
   @Override
   public void reset() {
-    MarioProgressBarSettingsState settings = MarioProgressBarSettingsState.getInstance();
+    DoomProgressBarSettingsState settings = DoomProgressBarSettingsState.getInstance();
     mySettingsComponent.setChosenCharacter(settings.selectedCharacter);
   }
 

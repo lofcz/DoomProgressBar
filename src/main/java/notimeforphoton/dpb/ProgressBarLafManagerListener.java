@@ -1,4 +1,4 @@
-package manjaro.mpb;
+package notimeforphoton.dpb;
 
 import com.intellij.ide.ui.LafManager;
 import com.intellij.ide.ui.LafManagerListener;

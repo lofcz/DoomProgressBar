@@ -1,31 +1,28 @@
-package manjaro.mpb.config;// Copyright 2000-2022 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
-
+package notimeforphoton.dpb.config;// Copyright 2000-2022 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
 
 import com.intellij.ui.components.JBLabel;
 import com.intellij.ui.components.JBRadioButton;
 import com.intellij.util.ui.FormBuilder;
 import com.intellij.util.ui.UIUtil;
-import manjaro.mpb.MBCharacter;
+import notimeforphoton.dpb.MBCharacter;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static manjaro.mpb.MBCharacter.*;
 
-
-public class MarioProgressBarSettingsComponent {
+public class DoomProgressBarSettingsComponent {
 
     private final JPanel configMainPanel;
 
     private final List<JBRadioButton> charactersRadioButtons = new ArrayList<>();
 
-    public MarioProgressBarSettingsComponent() {
+    public DoomProgressBarSettingsComponent() {
         JBLabel title = new JBLabel("Choose your character :", UIUtil.ComponentStyle.REGULAR);
         ButtonGroup characterSelectGroup = new ButtonGroup();
         FormBuilder formBuilder = FormBuilder.createFormBuilder().addComponent(title);
-        for (MBCharacter character : values()) {
+        for (MBCharacter character : MBCharacter.values()) {
             JBRadioButton radioButton = new JBRadioButton(character.getDisplayName());
             characterSelectGroup.add(radioButton);
             charactersRadioButtons.add(radioButton);
@@ -50,8 +47,8 @@ public class MarioProgressBarSettingsComponent {
     public MBCharacter getChosenCharacter() {
         return charactersRadioButtons.stream()
                 .filter(AbstractButton::isSelected).findFirst()
-                .map(radioButton -> valueOf(radioButton.getText().toUpperCase()))
-                .orElse(MARIO);
+                .map(radioButton -> MBCharacter.valueOf(radioButton.getText().toUpperCase()))
+                .orElse(MBCharacter.DOOM_GUY);
     }
 
     public void setChosenCharacter(@NotNull MBCharacter newBros) {

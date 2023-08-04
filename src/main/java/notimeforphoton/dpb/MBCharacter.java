@@ -1,11 +1,9 @@
-package manjaro.mpb;
+package notimeforphoton.dpb;
 
 import javax.swing.*;
 
 public enum MBCharacter {
-
-    MARIO(Icons.MARIO),
-    LUIGI(Icons.LUIGI);
+    DOOM_GUY(Icons.DOOM_GUY);
 
     private final ImageIcon icon;
 

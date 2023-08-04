@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>manjaro.mpb</id>
+  <id>notimeforphoton.dpb</id>
   <name>Doom Progress Bar</name>
   <version>1.8</version>
   <idea-version since-build="193"/>

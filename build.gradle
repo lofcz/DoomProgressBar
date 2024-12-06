@@ -1,24 +1,35 @@
 plugins {
-    id 'org.jetbrains.intellij' version '1.9.0'
     id 'java'
+    id 'org.jetbrains.intellij.platform' version '2.2.0'
 }
 
-group "notimeforphoton.dpb"
+group "lofcz.tpb"
 version '1.0'
 
 repositories {
     mavenCentral()
+
+    intellijPlatform {
+        defaultRepositories()
+    }
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+tasks {
+    wrapper {
+        gradleVersion = '8.10.1'
+    }
 }
 
 dependencies {
-
-}
-
-// See https://github.com/JetBrains/gradle-intellij-plugin/
-intellij {
-    version = '2022.1'
-    plugins = ['java']
-    updateSinceUntilBuild = false
+    intellijPlatform {
+        create("RD", "2024.2")
+    }
 }
 
 test {

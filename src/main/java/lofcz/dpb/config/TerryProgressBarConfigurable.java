@@ -1,4 +1,4 @@
-package notimeforphoton.dpb.config;
+package lofcz.dpb.config;
 
 import com.intellij.openapi.options.Configurable;
 import org.jetbrains.annotations.Nls;
@@ -6,9 +6,9 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public class DoomProgressBarConfigurable implements Configurable {
+public class TerryProgressBarConfigurable implements Configurable {
 
-  private DoomProgressBarSettingsComponent mySettingsComponent;
+  private TerryProgressBarSettingsComponent mySettingsComponent;
 
   // A default constructor with no arguments is required because this implementation
   // is registered as an applicationConfigurable EP
@@ -16,7 +16,7 @@ public class DoomProgressBarConfigurable implements Configurable {
   @Nls(capitalization = Nls.Capitalization.Title)
   @Override
   public String getDisplayName() {
-    return "Doom Progress Bar";
+    return "Terry Progress Bar";
   }
 
   @Override
@@ -27,13 +27,13 @@ public class DoomProgressBarConfigurable implements Configurable {
   @Nullable
   @Override
   public JComponent createComponent() {
-    mySettingsComponent = new DoomProgressBarSettingsComponent();
+    mySettingsComponent = new TerryProgressBarSettingsComponent();
     return mySettingsComponent.getPanel();
   }
 
   @Override
   public boolean isModified() {
-    DoomProgressBarSettingsState settings = DoomProgressBarSettingsState.getInstance();
+    TerryProgressBarSettingsState settings = TerryProgressBarSettingsState.getInstance();
     boolean modified = !mySettingsComponent.getChosenCharacter().equals(settings.selectedCharacter);
     modified |= mySettingsComponent.getChosenCharacter() != settings.selectedCharacter;
     return modified;
@@ -41,13 +41,13 @@ public class DoomProgressBarConfigurable implements Configurable {
 
   @Override
   public void apply() {
-    DoomProgressBarSettingsState settings = DoomProgressBarSettingsState.getInstance();
+    TerryProgressBarSettingsState settings = TerryProgressBarSettingsState.getInstance();
     settings.selectedCharacter = mySettingsComponent.getChosenCharacter();
   }
 
   @Override
   public void reset() {
-    DoomProgressBarSettingsState settings = DoomProgressBarSettingsState.getInstance();
+    TerryProgressBarSettingsState settings = TerryProgressBarSettingsState.getInstance();
     mySettingsComponent.setChosenCharacter(settings.selectedCharacter);
   }
 

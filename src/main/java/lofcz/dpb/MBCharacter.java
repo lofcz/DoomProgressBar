@@ -1,9 +1,9 @@
-package notimeforphoton.dpb;
+package lofcz.dpb;
 
 import javax.swing.*;
 
 public enum MBCharacter {
-    DOOM_GUY(Icons.DOOM_GUY);
+    TERRY(Icons.TERRY_ICON);
 
     private final ImageIcon icon;
 

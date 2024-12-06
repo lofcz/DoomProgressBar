@@ -1,18 +1,17 @@
 <idea-plugin>
-  <id>notimeforphoton.dpb</id>
-  <name>Doom Progress Bar</name>
+  <id>lofcz.dpb</id>
+  <name>Terry Progress Bar</name>
   <version>1.8</version>
-  <idea-version since-build="193"/>
-  <vendor email="daniyarsansyzbayev@proton.me">Daniyar Sansyzbayev</vendor>
+  <idea-version since-build="242"/>
+  <vendor email="stagl@wattlescript.org">Matěj Štágl</vendor>
 
   <description><![CDATA[
-      This is the Doom Progress Bar for IJ based IDEs based on the Nyan Progress Bar by Dmitry Batkovitch and Mario Progress Bar of Kikimanjaro.
-      It display Doom guy with a fire wall for the basic bar.
+      This is the Terry A. Davis Progress Bar for IJ based IDEs based on the Nyan Progress Bar by Dmitry Batkovitch and Mario Progress Bar of Kikimanjaro.
       <br>
       <br>
       You can access plugin's configuration in :
       <br>
-      Settings > Tools > Doom Progress Bar
+      Settings > Tools > Terry Progress Bar
       <br>
     ]]></description>
 
@@ -22,12 +21,12 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <applicationService
-            serviceImplementation="notimeforphoton.dpb.config.DoomProgressBarSettingsState" />
+            serviceImplementation="lofcz.dpb.config.TerryProgressBarSettingsState" />
     <applicationConfigurable
             parentId="tools"
-            instance="notimeforphoton.dpb.config.DoomProgressBarConfigurable"
+            instance="lofcz.dpb.config.TerryProgressBarConfigurable"
             id="org.intellij.sdk.settings.AppSettingsConfigurable"
-            displayName="Doom Progress Bar"/>
+            displayName="Terry Progress Bar"/>
   </extensions>
 
   <actions>
@@ -35,7 +34,7 @@
   </actions>
 
   <applicationListeners>
-    <listener class="notimeforphoton.dpb.ProgressBarLafManagerListener"
+    <listener class="lofcz.dpb.ProgressBarLafManagerListener"
               topic="com.intellij.ide.ui.LafManagerListener" />
   </applicationListeners>
 </idea-plugin>

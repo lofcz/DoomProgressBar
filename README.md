@@ -1,9 +1,6 @@
-# DoomProgressBar
+# TerryProgressBar
 
-The Doom progress bar for IntelliJ IDEA and other JetBrains IDEs.
-
-![DoomBar](src/main/resources/doom-progress-bar.png)
-![DoomBar](src/main/resources/doom-progress-bar-2.png)
+The Terry A. Davis progress bar for IntelliJ IDEA and other JetBrains IDEs.
 
 ## Contributing
 
@@ -16,6 +13,7 @@ Contributions are very welcome on this project! Please see our [contributing gui
 
 ### Code
 
+* The code for the progress bar was adapted from [Doom Progess Bar](https://github.com/dsansyzbayev/DoomProgressBar).
 * The code for the progress bar was adapted from [Mario Progess Bar](https://github.com/KikiManjaro/MarioProgressBar).
 * The code for the progress bar was adapted from [Nyan Progess Bar](https://github.com/batya239/NyanProgressBar).
 * This plugin is of course heavily dependent on JetBrains' IntelliJ SDK

@@ -4,13 +4,21 @@ plugins {
 }
 
 group "lofcz.tpb"
-version '1.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()
 
     intellijPlatform {
         defaultRepositories()
+    }
+}
+
+intellijPlatform {
+    pluginVerification {
+        ides {
+            ide "RD", "2024.2"
+        }
     }
 }
 

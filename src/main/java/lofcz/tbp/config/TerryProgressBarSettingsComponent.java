@@ -1,11 +1,11 @@
-package lofcz.dpb.config;// Copyright 2000-2022 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+package lofcz.tbp.config;// Copyright 2000-2022 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
 
 import com.intellij.ui.components.JBLabel;
 import com.intellij.ui.components.JBRadioButton;
 import com.intellij.util.ui.FormBuilder;
 import com.intellij.util.ui.UIUtil;
 
-import lofcz.dpb.MBCharacter;
+import lofcz.tbp.MBCharacter;
 
 import org.jetbrains.annotations.NotNull;
 

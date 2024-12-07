@@ -1,4 +1,4 @@
-package lofcz.dpb.config;
+package lofcz.tbp.config;
 
 import com.intellij.openapi.options.Configurable;
 import org.jetbrains.annotations.Nls;

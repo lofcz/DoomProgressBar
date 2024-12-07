@@ -1,4 +1,4 @@
-package lofcz.dpb.config;
+package lofcz.tbp.config;
 
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;
@@ -6,13 +6,13 @@ import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.util.xmlb.XmlSerializerUtil;
 
-import lofcz.dpb.MBCharacter;
+import lofcz.tbp.MBCharacter;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @State(
-        name = "lofcz.dpb.config.TerryProgressBarSettingsState",
+        name = "lofcz.tpb.config.TerryProgressBarSettingsState",
         storages = @Storage("TerryProgressBarPluginSettings.xml")
 )
 public class TerryProgressBarSettingsState implements PersistentStateComponent<TerryProgressBarSettingsState> {

@@ -1,7 +1,7 @@
 <idea-plugin>
-  <id>lofcz.dpb</id>
+  <id>lofcz.tbp</id>
   <name>Terry Progress Bar</name>
-  <version>1.8</version>
+  <version>1.9</version>
   <idea-version since-build="242"/>
   <vendor email="stagl@wattlescript.org">Matěj Štágl</vendor>
 
@@ -21,10 +21,10 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <applicationService
-            serviceImplementation="lofcz.dpb.config.TerryProgressBarSettingsState" />
+            serviceImplementation="lofcz.tbp.config.TerryProgressBarSettingsState" />
     <applicationConfigurable
             parentId="tools"
-            instance="lofcz.dpb.config.TerryProgressBarConfigurable"
+            instance="lofcz.tbp.config.TerryProgressBarConfigurable"
             id="org.intellij.sdk.settings.AppSettingsConfigurable"
             displayName="Terry Progress Bar"/>
   </extensions>
@@ -34,7 +34,7 @@
   </actions>
 
   <applicationListeners>
-    <listener class="lofcz.dpb.ProgressBarLafManagerListener"
-              topic="com.intellij.ide.ui.LafManagerListener" />
+    <listener class="lofcz.tbp.ProgressBarLafManagerListener" topic="com.intellij.ide.ui.LafManagerListener" />
+    <listener class="lofcz.tbp.ProgressBarLafManagerListener" topic="com.intellij.openapi.application.ApplicationActivationListener" />
   </applicationListeners>
 </idea-plugin>

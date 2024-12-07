@@ -1,5 +1,4 @@
-package lofcz.dpb;
-
+package lofcz.tbp;
 import com.intellij.ide.ui.LafManager;
 import com.intellij.ide.ui.LafManagerListener;
 import com.intellij.openapi.application.ApplicationActivationListener;

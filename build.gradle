@@ -18,6 +18,14 @@ repositories {
 }
 
 intellijPlatform {
+
+    pluginConfiguration {
+        ideaVersion {
+            sinceBuild = '232'
+            untilBuild = '271.*'
+        }
+    }
+
     pluginVerification {
         ides {
             ide IntelliJPlatformType.Rider, "2024.2"

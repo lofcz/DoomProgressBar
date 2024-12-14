@@ -8,7 +8,10 @@ Contributions are very welcome on this project! Please see our [contributing gui
 
 ## Acknowledgements
 
+![download](https://github.com/user-attachments/assets/87d291e9-5bef-49cd-b4bb-1bc959aa5236)
+
 ### Sprites
+
 * All sprites belong to owners of the pictures.
 
 ### Code

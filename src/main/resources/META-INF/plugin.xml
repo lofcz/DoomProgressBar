@@ -2,7 +2,7 @@
   <id>lofcz.tbp</id>
   <name>Terry Progress Bar</name>
   <version>1.0.2</version>
-  <idea-version since-build="242" until-build="254.*" />
+  <idea-version since-build="232" until-build="274.*" />
   <vendor email="stagl@wattlescript.org">Matěj Štágl</vendor>
 
   <description><![CDATA[

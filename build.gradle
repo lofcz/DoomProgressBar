@@ -1,6 +1,9 @@
+import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
+import org.jetbrains.intellij.platform.gradle.models.ProductRelease
+
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij.platform' version '2.2.0'
+    id 'org.jetbrains.intellij.platform' version '2.2.1'
 }
 
 group "lofcz.tpb"
@@ -17,7 +20,14 @@ repositories {
 intellijPlatform {
     pluginVerification {
         ides {
-            ide "RD", "2024.2"
+            ide IntelliJPlatformType.Rider, "2024.2"
+            recommended()
+            select {
+                it.types = [ IntelliJPlatformType.Rider ]
+                it.channels = [ProductRelease.Channel.RELEASE]
+                it.sinceBuild = '232'
+                it.untilBuild = '271.*'
+            }
         }
     }
 }
